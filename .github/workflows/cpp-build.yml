@@ -1,0 +1,21 @@
+name: C++ Build Check
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Compile main.cpp with g++
+        run: run: g++ -std=c++17 main.cpp gradebook.cpp -o gradebook
+
+      - name: Verify executable created
+        run: test -f ./movie_system
