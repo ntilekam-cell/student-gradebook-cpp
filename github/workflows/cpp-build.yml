@@ -15,7 +15,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Compile gradebook with g++
-        run: g++ -std=c++17 main.cpp gradebook.cpp -o gradebook
+        run: g++ -std=c++17 maini.cpp gradebook.cpp -o gradebook
 
       - name: Verify executable created
         run: test -f ./gradebook
